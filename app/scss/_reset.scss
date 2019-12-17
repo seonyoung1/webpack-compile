@@ -24,10 +24,9 @@ footer,header,hgroup,menu,nav,section {
 
 
 body {
-    font-family:arial, sans-serif;
+    font-family:$primary-font;
     @include vw-font-size-pc(16);
-    letter-spacing:-0.01em; line-height:1.4; -webkit-font-smoothing : antialiased;
-    color:#000;
+    letter-spacing:-0.01em; line-height:1.4; -webkit-font-smoothing : antialiased; color:#000;
     @media ( max-width : 768px ){
         @include vw-font-size-mo(16);
     }
@@ -88,6 +87,7 @@ input, select, textarea {
     vertical-align:middle;
     box-sizing:border-box;
     border-radius:0;
+    font-family:$primary-font;
 }
 input{
     margin:0;
@@ -106,7 +106,8 @@ button {
     padding:0;
     border:0;
     background:transparent;
-    cursor:pointer
+    cursor:pointer;
+    font-family:$primary-font;
 }
 a{
     text-decoration:none;
