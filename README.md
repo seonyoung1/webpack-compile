@@ -16,3 +16,10 @@ npm dev
 npm build
 ````
 + 브라우저를 지원하지 않으나 기존(gulp) 실행 때 처럼 css, js 폴더 생성.
+
+
+````
+npm prod
+````
+- 배포 시 사용
+- css, js 압축되어 나온다.
