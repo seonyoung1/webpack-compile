@@ -7,10 +7,12 @@ module.exports = {
 	resolve: {
 		extensions: ['.js'],
 	},
-	entry: ['@babel/polyfill', './app/dev-js/app.js', './app/scss/common.scss'],
+	entry: {
+		app: ['@babel/polyfill', './app/dev-js/app.js', './app/scss/common.scss'],
+	},
 	output: {
 		path: path.resolve(__dirname, 'app'),
-		filename: 'js/app.js',
+		filename: 'js/[name].js',
 		publicPath: '/app',
 	},
 	plugins: [
@@ -32,7 +34,21 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+				use: [
+					MiniCssExtractPlugin.loader,
+					{
+						loader: 'css-loader',
+						options: {
+							sourceMap: true,
+						},
+					},
+					{
+						loader: 'sass-loader',
+						options: {
+							sourceMap: true,
+						},
+					},
+				],
 				exclude: /node_modules/,
 			},
 		],
