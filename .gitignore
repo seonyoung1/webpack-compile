@@ -1,4 +1,4 @@
 .idea/
-/node_modules
-/css
-/js
+node_modules
+app/css
+app/js
