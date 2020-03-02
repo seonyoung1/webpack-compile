@@ -8,7 +8,8 @@ module.exports = {
 		extensions: ['.js'],
 	},
 	entry: {
-		app: ['@babel/polyfill', './app/dev-js/app.js', './app/scss/common.scss'],
+		app: ['@babel/polyfill', './app/dev-js/app.js'],
+		styles: ['./app/scss/common.scss']
 	},
 	output: {
 		path: path.resolve(__dirname, 'app'),
@@ -51,6 +52,14 @@ module.exports = {
 				],
 				exclude: /node_modules/,
 			},
+			{
+				test: /\.(ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				loader: 'file-loader',
+				options: {
+					publicPath: '../images/',
+					name: '[name].[ext]',
+				}
+			}
 		],
 	},
 };
