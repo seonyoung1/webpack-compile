@@ -8,13 +8,12 @@ module.exports = {
 		extensions: ['.js'],
 	},
 	entry: {
-		app: ['@babel/polyfill', './app/dev-js/app.js'],
-		styles: ['./app/scss/common.scss']
+		app: ['@babel/polyfill', './src/js/app.js'],
+		styles: ['./src/scss/common.scss']
 	},
 	output: {
-		path: path.resolve(__dirname, 'app'),
+		path: path.resolve(__dirname, './dist'),
 		filename: 'js/[name].js',
-		publicPath: '/app',
 	},
 	plugins: [
 	    new MiniCssExtractPlugin({ filename: 'css/common.css' })
@@ -23,7 +22,7 @@ module.exports = {
 		rules: [
 			{
 				test: /\.js$/,
-				include: [path.resolve(__dirname, 'app/dev-js')],
+				include: [path.resolve(__dirname, 'src/js')],
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
@@ -56,8 +55,9 @@ module.exports = {
 				test: /\.(ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 				loader: 'file-loader',
 				options: {
-					publicPath: '../images/',
-					name: '[name].[ext]',
+					publicPath: '../',
+					name: 'images/[name].[ext]',
+					limit: 1000,
 				}
 			}
 		],
