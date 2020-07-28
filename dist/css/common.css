@@ -12,14 +12,17 @@ footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 a {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 body {
   font-family: verdana, arial, sans-serif;
@@ -28,53 +31,71 @@ body {
   letter-spacing: -0.01em;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
-  color: #000; }
-  @media (min-width: 1440px) {
-    body {
-      font-size: 16px; } }
-  @media (max-width: 768px) {
-    body {
-      font-size: 34.13333px;
-      font-size: 4.44444vw; } }
-  @media (max-width: 768px) and (max-width: 360px) {
-    body {
-      font-size: 16px;
-      font-size: 4.44444vw; } }
+  color: #000;
+}
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 34.13333px;
+    font-size: 4.44444vw;
+  }
+}
+
+@media (max-width: 768px) and (max-width: 360px) {
+  body {
+    font-size: 16px;
+    font-size: 4.44444vw;
+  }
+}
 
 nav ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: '';
-  content: none; }
+  content: none;
+}
 
 /* change colours to suit your needs */
 ins {
   background-color: #ff9;
   color: #000;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /* change colours to suit your needs */
 mark {
   background-color: #ff9;
   color: #000;
   font-style: italic;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 del {
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 abbr[title], dfn[title] {
   border-bottom: 1px dotted;
-  cursor: help; }
+  cursor: help;
+}
 
 table {
   border-collapse: collapse;
-  border: 0 none; }
+  border: 0 none;
+}
 
 /* change border colour to suit your needs */
 hr {
@@ -83,25 +104,31 @@ hr {
   border: 0;
   border-top: 1px solid #cccccc;
   margin: 1em 0;
-  padding: 0; }
+  padding: 0;
+}
 
 input, select, textarea {
   vertical-align: middle;
   box-sizing: border-box;
   border-radius: 0;
-  font-family: verdana, arial, sans-serif; }
+  font-family: verdana, arial, sans-serif;
+}
 
 input {
-  margin: 0; }
+  margin: 0;
+}
 
 img, fieldset {
-  border: 0; }
+  border: 0;
+}
 
 ul, ol, li {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 li img {
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 button {
   box-sizing: border-box;
@@ -109,33 +136,40 @@ button {
   border: 0;
   background: transparent;
   cursor: pointer;
-  font-family: verdana, arial, sans-serif; }
+  font-family: verdana, arial, sans-serif;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 img {
   vertical-align: middle;
-  font-size: 0; }
+  font-size: 0;
+}
 
 p {
   font-weight: bold;
-  color: #000; }
+  color: #000;
+}
 
 body {
-  background-color: skyblue; }
+  background-color: #fff;
+}
 
 #wrapper {
   width: 100%;
   height: 100vh;
   text-align: center;
   color: green;
-  font-size: 2em; }
+  font-size: 2em;
+}
 
 .image {
   width: 500px;
   height: 500px;
-  background: url(../images/test2.png) no-repeat; }
+  background: url(../images/test2.png) no-repeat;
+}
 
 
 /*# sourceMappingURL=common.css.map*/

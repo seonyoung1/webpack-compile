@@ -8,8 +8,7 @@ module.exports = {
 		extensions: ['.js'],
 	},
 	entry: {
-		app: ['@babel/polyfill', './src/js/app.js'],
-		styles: ['./src/scss/common.scss']
+		app: ['@babel/polyfill', './src/js/app.js', './src/scss/common.scss']
 	},
 	output: {
 		path: path.resolve(__dirname, './dist'),
@@ -46,17 +45,29 @@ module.exports = {
 						loader: 'sass-loader',
 						options: {
 							sourceMap: true,
+							sassOptions: {
+								outputStyle: 'expanded', //nested, expanded, compact, compressed
+							},
 						},
 					},
 				],
 				exclude: /node_modules/,
 			},
 			{
-				test: /\.(ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				test: /\.(ico|png|jpg|jpeg|gif|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
 				loader: 'file-loader',
 				options: {
 					publicPath: '../',
 					name: 'images/[name].[ext]',
+					limit: 1000,
+				}
+			},
+			{
+				test: /\.(woff|woff2|ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				loader: 'file-loader',
+				options: {
+					publicPath: '../',
+					name: 'fonts/[name].[ext]',
 					limit: 1000,
 				}
 			}
