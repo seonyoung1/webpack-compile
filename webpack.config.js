@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -15,7 +16,10 @@ module.exports = {
 		filename: 'js/[name].js',
 	},
 	plugins: [
-	    new MiniCssExtractPlugin({ filename: 'css/common.css' })
+	    new MiniCssExtractPlugin({ filename: 'css/common.css' }),
+		new webpack.BannerPlugin({
+			banner: () => `빌드 날짜: ${new Date().toLocaleString()}`
+		})
     ],
 	module: {
 		rules: [
